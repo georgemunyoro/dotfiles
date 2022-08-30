@@ -76,5 +76,34 @@ vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
 vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+-- Code action
+vim.keymap.set("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", { silent = true })
+vim.keymap.set("v", "<leader>a", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true })
+
+local status, eslint = pcall(require, "eslint")
+if (not status) then return end
+
+------------
+-- eslint --
+------------
+eslint.setup({
+    bin = 'eslint', -- or `eslint_d`
+    code_actions = {
+	enable = true,
+	apply_on_save = {
+	    enable = false,
+	    types = { "problem" }, -- "directive", "problem", "suggestion", "layout"
+	},
+	disable_rule_comment = {
+	    enable = true,
+	    location = "separate_line", -- or `same_line`
+	},
+    },
+    diagnostics = {
+	enable = true,
+	report_unused_disable_directives = false,
+	run_on = "type", -- or `save`
+    },
+})
 
 

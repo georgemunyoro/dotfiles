@@ -62,6 +62,11 @@ packer.startup(function(use)
     use "glepnir/lspsaga.nvim"				-- Cool UIs for various lsp features
     use "onsails/lspkind-nvim" 				-- VSCode-like pictograms
 
+    -----------------------------
+    -- Language-specific tools --
+    -----------------------------
+    -- JS/TS
+    use "MunifTanjim/eslint.nvim"			-- eslint for neovim lsp
 
     ------------
     -- Themes --
