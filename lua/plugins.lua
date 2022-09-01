@@ -75,5 +75,10 @@ packer.startup(function(use)
 
     use "tjdevries/colorbuddy.nvim"			-- A colorscheme helper for Neovim.
 
+    ----------
+    -- Misc --
+    ----------
+    use "psliwka/vim-smoothie"
+
 end)
 

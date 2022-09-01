@@ -72,10 +72,12 @@ saga.init_lsp_saga {
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
-vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+vim.keymap.set('n', 'gr', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+-- vim.keymap.set('n', 'gd', vim.lsp.buf.implementation, opts)
 vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
-vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+vim.keymap.set('n', '<leader>r', '<Cmd>Lspsaga rename<CR>', opts)
 -- Code action
 vim.keymap.set("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("v", "<leader>a", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true })
@@ -87,7 +89,7 @@ if (not status) then return end
 -- eslint --
 ------------
 eslint.setup({
-    bin = 'eslint', -- or `eslint_d`
+    bin = 'eslint_d', -- or `eslint_d`
     code_actions = {
 	enable = true,
 	apply_on_save = {
