@@ -67,6 +67,8 @@ packer.startup(function(use)
     -----------------------------
     -- JS/TS
     use "MunifTanjim/eslint.nvim"			-- eslint for neovim lsp
+    -- Svelte
+    use "evanleck/vim-svelte"				-- highlighting
 
     ------------
     -- Themes --

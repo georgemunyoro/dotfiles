@@ -24,3 +24,6 @@ nvim_lsp.tsserver.setup {
 -- Python
 nvim_lsp.pyright.setup{}
 
+-- Svelte
+nvim_lsp.svelte.setup{}
+
