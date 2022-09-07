@@ -21,3 +21,6 @@ nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" }
 }
 
+-- Python
+nvim_lsp.pyright.setup{}
+

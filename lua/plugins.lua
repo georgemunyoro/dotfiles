@@ -72,6 +72,9 @@ packer.startup(function(use)
     -- Themes --
     ------------
     use "svrana/neosolarized.nvim"
+    use "arzg/vim-colors-xcode"
+    use "tomasiser/vim-code-dark"
+    use "Mofiqul/vscode.nvim"
 
     use "tjdevries/colorbuddy.nvim"			-- A colorscheme helper for Neovim.
 
@@ -79,6 +82,7 @@ packer.startup(function(use)
     -- Misc --
     ----------
     use "psliwka/vim-smoothie"
+    use "lukas-reineke/indent-blankline.nvim"
 
 end)
 

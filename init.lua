@@ -22,9 +22,10 @@ vim.cmd [[
 	set nowrap
 	set hidden
 	set updatetime=300
-	set tabstop=8
-	set softtabstop=0 noexpandtab
-	set shiftwidth=4 smarttab
+	set tabstop=2
+	" set expandtab
+	" set softtabstop=0 noexpandtab
+	set shiftwidth=2 smarttab
 	set nobackup
 	set noswapfile
 	set incsearch
@@ -45,5 +46,7 @@ vim.cmd [[
 	nnoremap <C-K> <C-W><C-K>
 	nnoremap <C-L> <C-W><C-L>
 	nnoremap <C-H> <C-W><C-H>
+
+	colorscheme codedark
 ]]
 
