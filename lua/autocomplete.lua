@@ -1,7 +1,6 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
-
 --------------------
 -- Base LSP setup --
 --------------------
@@ -74,20 +73,20 @@ vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga lsp_finder<CR>', opts)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
--- vim.keymap.set('n', 'gd', vim.lsp.buf.implementation, opts)
 vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
 vim.keymap.set('n', '<leader>r', '<Cmd>Lspsaga rename<CR>', opts)
--- Code action
+
+-- Code Actions
 vim.keymap.set("n", "<leader>a", "<cmd>Lspsaga code_action<CR>", { silent = true })
 vim.keymap.set("v", "<leader>a", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true })
-
-local status, eslint = pcall(require, "eslint")
-if (not status) then return end
 
 ------------
 -- eslint --
 ------------
+local status, eslint = pcall(require, "eslint")
+if (not status) then return end
+
 eslint.setup({
     bin = 'eslint_d', -- or `eslint_d`
     code_actions = {

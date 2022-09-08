@@ -48,5 +48,6 @@ vim.cmd [[
 	nnoremap <C-H> <C-W><C-H>
 
 	colorscheme codedark
+	" colorscheme koehler
 ]]
 

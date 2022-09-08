@@ -23,6 +23,7 @@ packer.startup(function(use)
     use "hrsh7th/cmp-buffer" 				-- nvim-cmp source for buffer words
     use "hrsh7th/nvim-cmp" 				-- A completion engine plugin for neovim
     use "nvim-treesitter/nvim-treesitter" 		-- Treesitter
+		use "https://github.com/folke/trouble.nvim"
 
     --------------
     -- Autopair --
@@ -77,6 +78,7 @@ packer.startup(function(use)
     use "arzg/vim-colors-xcode"
     use "tomasiser/vim-code-dark"
     use "Mofiqul/vscode.nvim"
+		use "projekt0n/github-nvim-theme"
 
     use "tjdevries/colorbuddy.nvim"			-- A colorscheme helper for Neovim.
 
@@ -85,6 +87,7 @@ packer.startup(function(use)
     ----------
     use "psliwka/vim-smoothie"
     use "lukas-reineke/indent-blankline.nvim"
+		use "mhinz/vim-startify"						-- Vim Startify
 
 end)
 
