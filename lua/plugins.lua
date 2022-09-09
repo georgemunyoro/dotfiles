@@ -17,6 +17,10 @@ packer.startup(function(use)
     ---------------
     -- LSP Stuff --
     ---------------
+		use {
+			"neoclide/coc.nvim", branch = "release"
+		}
+
     use "neovim/nvim-lspconfig" 			-- neovim lsp config
     use "L3MON4D3/LuaSnip" 				-- Snippet engine
     use "hrsh7th/cmp-nvim-lsp" 				-- nvim-cmp source for neovim's built-in LSP

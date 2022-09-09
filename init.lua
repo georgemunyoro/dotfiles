@@ -1,6 +1,6 @@
 
 require("plugins")
-require("lsp")
+-- require("lsp")
 require("autocomplete")
 require("highlighting")
 require("autopair")
@@ -8,7 +8,7 @@ require("autotag")
 require("colors")
 require("line")
 require("fuzzy")
-require("formatting")
+-- require("formatting")
 require("git")
 
 vim.cmd [[
