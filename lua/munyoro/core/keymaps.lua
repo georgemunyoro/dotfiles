@@ -29,3 +29,5 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- git
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>") -- git blame
+
+vim.cmd([[:command Config edit ~/.config/nvim/]])
