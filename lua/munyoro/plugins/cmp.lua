@@ -24,6 +24,13 @@ local has_words_before = function()
 end
 
 cmp.setup({
+	preselect = require("cmp").PreselectMode.None,
+	complete = {
+		completeopt = vim.menu,
+		vim.menuone,
+		vim.noinsert,
+		vim.noselect,
+	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -35,8 +42,6 @@ cmp.setup({
 				cmp.select_next_item()
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
-			elseif has_words_before() then
-				cmp.complete()
 			else
 				fallback()
 			end
@@ -68,7 +73,6 @@ cmp.setup({
 		{ name = "path" }, -- file system paths
 		{ name = "nvim_lsp_signature_help" }, -- show function signatures
 	}),
-
 	-- configure lspkind for vs-code like icons
 	formatting = {
 		format = lspkind.cmp_format({
