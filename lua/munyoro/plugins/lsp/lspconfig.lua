@@ -34,12 +34,12 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+	keymap.set("n", "T", "<cmd>Lspsaga term_toggle<CR>", opts) -- open temporary terminal
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
-    vim.keymap.set('n', '<space>f', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
-
+	vim.keymap.set("n", "<space>f", function()
+		vim.lsp.buf.format({ async = true })
+	end, opts)
 
 	-- typescript specific keymaps (e.g. rename file and update imports)
 	if client.name == "tsserver" then
@@ -69,7 +69,6 @@ typescript.setup({
 -- configure css server
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
-
 	on_attach = on_attach,
 })
 
@@ -90,7 +89,8 @@ lspconfig["emmet_ls"].setup({
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	settings = { -- custom settings for lua
+	settings = {
+		-- custom settings for lua
 
 		Lua = {
 			-- make the language server recognize "vim" global
@@ -109,6 +109,6 @@ lspconfig["lua_ls"].setup({
 })
 
 lspconfig.rust_analyzer.setup({
-  capabilities = capabilities,
-  on_attach = on_attach
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
