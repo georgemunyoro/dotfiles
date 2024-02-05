@@ -4,11 +4,13 @@ if not saga_status then
 end
 
 saga.setup({
-  move_in_saga = { prev = "<C-k>", next = "<C-j>" },
-  finder_action_keys = {
-    open = "<CR>",
-  },
-  definition_action_keys = {
+  scroll_preview = { scroll_down = "<C-k>", scroll_up = "<C-j>" },
+  definition = {
     edit = "<CR>",
+  },
+  ui = {
+    colors = {
+      normal_bg = "#022746",
+    },
   },
 })

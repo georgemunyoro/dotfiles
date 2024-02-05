@@ -33,6 +33,8 @@ local on_attach = function(client, bufnr)
 
   if client.name == "tsserver" then
     km.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
+    km.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
+    km.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")
   end
 end
 
