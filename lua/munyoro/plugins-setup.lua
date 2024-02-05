@@ -53,6 +53,20 @@ require("lazy").setup({
   { "L3MON4D3/LuaSnip", version = "v2.*" },
   { "saadparwaiz1/cmp_luasnip" },
   { "rafamadriz/friendly-snippets" },
-})
 
+  -- lsp
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
+  { "neovim/nvim-lspconfig" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  {
+    "nvimdev/lspsaga.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
+  { "jose-elias-alvarez/typescript.nvim" },
+  { "onsails/lspkind.nvim" },
+})
 
