@@ -16,7 +16,7 @@ end
 -- load friendly snippets
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = "menu,menuone,noselect"
+-- vim.opt.completeopt = "menu,menuone,noinsert"
 
 cmp.setup({
   snippet = {
@@ -27,12 +27,29 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
     ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+    ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<CR>"] = cmp.mapping.confirm(),
+
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        local entry = cmp.get_selected_entry()
+        if not entry then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+          -- cmp.confirm()
+        else
+          cmp.confirm()
+        end
+      else
+        fallback()
+      end
+    end, { "i", "s", "c" }),
   }),
+  completion = {
+    completeopt = "menu,menuone,noinsert",
+  },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "luasnip" },
