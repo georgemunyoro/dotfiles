@@ -17,3 +17,5 @@ km.set("n", "<leader>tp", ":tabp<CR>")      -- go to previous tab
 
 km.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- vim maximizer
 
+km.set("n", "<leader>aa", ":lua vim.lsp.buf.format()<CR>") -- format
+

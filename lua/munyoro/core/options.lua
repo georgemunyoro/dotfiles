@@ -20,7 +20,7 @@ opt.smartcase = true
 
 -- theming
 opt.termguicolors = true
-opt.background = "dark"
+opt.background = "light"
 opt.signcolumn = "yes"
 
 -- backspace
@@ -32,4 +32,10 @@ opt.splitbelow = true
 
 -- disable swap
 opt.swapfile = false
+
+-- hide cmd line 
+opt.cmdheight = 0
+
+-- show cursor line
+opt.cursorline = true
 
