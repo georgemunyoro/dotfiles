@@ -2,7 +2,7 @@ return {
   "folke/tokyonight.nvim",
   dependencies = {
     "Mofiqul/vscode.nvim",
-    "rebelt/kanagawa.nvim",
+    "rebelot/kanagawa.nvim",
     "EdenEast/nightfox.nvim",
   },
   config = function()
