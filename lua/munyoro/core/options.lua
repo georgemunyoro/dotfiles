@@ -30,3 +30,7 @@ opt.backspace = "indent,eol,start"
 opt.wrap = false
 opt.cursorline = true
 opt.cmdheight = 0
+opt.colorcolumn = "79"
+
+vim.cmd("set wildoptions-=pum")
+

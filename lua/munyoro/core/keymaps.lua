@@ -12,3 +12,6 @@ km.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in 
 -- Misc
 km.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+km.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
+km.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Close file" })
+km.set("n", "<leader>qa", "<cmd>qa<CR>", { desc = "Close file" })

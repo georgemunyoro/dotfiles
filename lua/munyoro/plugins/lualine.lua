@@ -11,6 +11,14 @@ return {
         theme = "auto",
         component_separators = { left = " ", right = " " },
         section_separators = { left = " ", right = " " },
+        tabline = {
+          lualine_z = {
+            "tabs",
+            cond = function()
+              return #vim.fn.gettabinfo() > 2
+            end,
+          },
+        },
       },
       sections = {
         lualine_x = {
@@ -24,5 +32,7 @@ return {
         },
       },
     })
+
+    vim.opt.showtabline = 1
   end,
 }
