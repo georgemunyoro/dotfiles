@@ -38,6 +38,8 @@ return {
         "prismals",
         "pyright",
         "zls",
+        "rust_analyzer",
+        "clangd",
       },
     })
 
