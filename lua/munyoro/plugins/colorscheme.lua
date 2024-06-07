@@ -16,11 +16,24 @@ return {
     "nyoom-engineering/oxocarbon.nvim",
     "jacoborus/tender.vim",
     "kartikp10/noctis.nvim",
+    "olivercederborg/poimandres.nvim",
+    "barrientosvctor/abyss.nvim",
+    "loctvl842/monokai-pro.nvim",
 
     -- Lush, a lua colorscheme generator
     "rktjmp/lush.nvim",
   },
   config = function()
-    vim.cmd("colorscheme moonfly")
+    vim.g.moonflyItalics = false
+    vim.opt.background = "light"
+
+    -- vim.cmd("colorscheme abyss")
+    -- vim.cmd("colorscheme moonfly")
+    -- vim.cmd("colorscheme tokyonight-night")
+    -- vim.cmd("colorscheme dayfox")
+    -- vim.cmd("colorscheme monokai-pro-octagon")
+    vim.cmd("colorscheme vscode")
+
+    vim.cmd("set guicursor=i:block")
   end,
 }

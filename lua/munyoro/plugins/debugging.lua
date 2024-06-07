@@ -49,6 +49,22 @@ return {
 
       for _, language in ipairs({ "typescript", "javascript" }) do
         require("dap").configurations[language] = {
+          {
+            name = "PlayUp API Server (playup)",
+            type = "node-terminal",
+            request = "launch",
+            command = "npm run dev",
+            cwd = "${workspaceFolder}/api",
+            -- runtimeExecutable = "node",
+          },
+          {
+            type = "pwa-node",
+            name = "PlayUp API Server (api)",
+            request = "launch",
+            program = "${workspaceFolder}/dist/index.js",
+            cwd = "${workspaceFolder}",
+            runtimeExecutable = "node",
+          },
 
           -- attach to a node process that has been started with
           -- `--inspect` for longrunning tasks or `--inspect-brk` for short tasks
@@ -64,16 +80,16 @@ return {
             -- name of the debug action you have to select for this config
             name = "Attach debugger to existing `node --inspect` process",
             -- for compiled languages like TypeScript or Svelte.js
-            sourceMaps = true,
+            -- sourceMaps = true,
             -- resolve source maps in nested locations while ignoring node_modules
-            resolveSourceMapLocations = {
-              "${workspaceFolder}/**",
-              "!**/node_modules/**",
-            },
+            -- resolveSourceMapLocations = {
+            --   "${workspaceFolder}/**",
+            --   "!**/node_modules/**",
+            -- },
             -- path to src in vite based projects (and most other projects as well)
             cwd = "${workspaceFolder}/src",
             -- we don't want to debug code inside node_modules, so skip it!
-            skipFiles = { "${workspaceFolder}/node_modules/**/*.js" },
+            -- skipFiles = { "${workspaceFolder}/node_modules/**/*.js" },
           },
 
           {

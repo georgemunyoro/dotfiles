@@ -18,7 +18,6 @@ opt.smartcase = true
 
 -- Colors
 opt.termguicolors = true
-opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- Window splitting
@@ -33,4 +32,3 @@ opt.cmdheight = 0
 opt.colorcolumn = "79"
 
 vim.cmd("set wildoptions-=pum")
-
