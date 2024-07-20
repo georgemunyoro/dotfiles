@@ -40,6 +40,7 @@ return {
         "zls",
         "rust_analyzer",
         "clangd",
+        "gopls",
       },
     })
 

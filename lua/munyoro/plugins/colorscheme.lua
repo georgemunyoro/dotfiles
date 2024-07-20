@@ -25,14 +25,15 @@ return {
   },
   config = function()
     vim.g.moonflyItalics = false
-    vim.opt.background = "light"
+    vim.opt.background = "dark"
 
     -- vim.cmd("colorscheme abyss")
     -- vim.cmd("colorscheme moonfly")
     -- vim.cmd("colorscheme tokyonight-night")
     -- vim.cmd("colorscheme dayfox")
     -- vim.cmd("colorscheme monokai-pro-octagon")
-    vim.cmd("colorscheme vscode")
+    -- vim.cmd("colorscheme vscode")
+    vim.cmd("colorscheme framer_syntax_dark")
 
     vim.cmd("set guicursor=i:block")
   end,
