@@ -32,7 +32,8 @@ return {
     -- vim.cmd("colorscheme tokyonight-night")
     -- vim.cmd("colorscheme dayfox")
     -- vim.cmd("colorscheme monokai-pro-octagon")
-    vim.cmd("colorscheme vscode")
+    -- vim.cmd("colorscheme vscode")
+    vim.cmd("colorscheme tokyonight")
 
     vim.cmd("set guicursor=i:block")
   end,
